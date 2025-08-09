@@ -5,8 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
-    "start": "node api/index.js"
+    "dev": "node init && nodemon",
+    "start": "node init && node api/index.js"
   },
   "keywords": [],
   "author": "Farrukh Subhani",

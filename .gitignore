@@ -2,8 +2,6 @@
 node_modules/
 
 # --- Environment files ---
-.env
-.env.*
 !.env.example
 
 # --- Logs ---
@@ -42,7 +40,6 @@ Thumbs.db
 
 # --- Editor/IDE ---
 .idea/
-.vscode/
 *.swp
 *.swo
 
@@ -51,3 +48,4 @@ Thumbs.db
 *.local
 
 
+config.bat
