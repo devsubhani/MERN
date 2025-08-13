@@ -59,7 +59,7 @@ cp .env.example .env
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `MONGO_DB_URI` | MongoDB connection string | `mongodb+srv://devsubhani:Dev.Subhani@mern-blog.mrjuzs3.mongodb.net/?retryWrites=true&w=majority&appName=mern-blog` |
+| `MONGO_DB_URI` | MongoDB connection string | `mongodb+srv://<username>:<password>@mern-blog.mrjuzs3.mongodb.net/?retryWrites=true&w=majority&appName=mern-blog` |
 | `PORT` | Server port | `4000` |
 | `NODE_ENV` | Environment mode | `development` |
 | `JWT_SECRET` | Secret for JWT tokens | `your_jwt_secret_key_here` |
