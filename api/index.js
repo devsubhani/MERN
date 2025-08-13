@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import userRoutes from "./routes/user.routes.js";
 
 // Load environment variables
 dotenv.config();
@@ -10,15 +11,6 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Basic route for testing
-app.get('/', (req, res) => {
-  res.json({ 
-    message: 'MERN API is running!',
-    environment: process.env.NODE_ENV,
-    timestamp: new Date().toISOString()
-  });
-});
 
 // mongoose.connect("mongodb://localhost:27017/MERNDB")
 mongoose.connect(process.env.MONGO_DB_URI).then(
@@ -32,3 +24,15 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Routes
+app.use("/api/user", userRoutes);
+
+// Basic route for testing
+// app.get('/', (req, res) => {
+//   res.json({ 
+//     message: 'MERN API is running!',
+//     environment: process.env.NODE_ENV,
+//     timestamp: new Date().toISOString()
+//   });
+// });
