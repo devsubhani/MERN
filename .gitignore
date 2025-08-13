@@ -2,8 +2,6 @@
 node_modules/
 
 # --- Environment files ---
-.env
-.env.*
 !.env.example
 
 # --- Logs ---
@@ -51,3 +49,4 @@ Thumbs.db
 *.local
 
 
+config.bat
